@@ -1,0 +1,20 @@
+[gd_resource type="AudioBusLayout" load_steps=3 format=3 uid="uid://be2pggxbmg1l6"]
+
+[sub_resource type="AudioEffectFilter" id="AudioEffectFilter_s6vod"]
+resource_name = "Filter"
+
+[sub_resource type="AudioEffectReverb" id="AudioEffectReverb_dou5b"]
+resource_name = "Reverb"
+wet = 0.26
+
+[resource]
+bus/1/name = &"Echo"
+bus/1/solo = false
+bus/1/mute = false
+bus/1/bypass_fx = false
+bus/1/volume_db = -4.003
+bus/1/send = &"Master"
+bus/1/effect/0/effect = SubResource("AudioEffectFilter_s6vod")
+bus/1/effect/0/enabled = false
+bus/1/effect/1/effect = SubResource("AudioEffectReverb_dou5b")
+bus/1/effect/1/enabled = true

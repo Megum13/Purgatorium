@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=3 uid="uid://cfbanpmjqigm1"]
+
+[ext_resource type="FontFile" uid="uid://dpyfjwqipymgi" path="res://Fonts/OffBit-101Bold.ttf" id="1_n8jym"]
+[ext_resource type="Script" path="res://canvas_layer.gd" id="1_qun74"]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource("1_qun74")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 27.0
+offset_top = 29.0
+offset_right = 225.0
+offset_bottom = 54.0
+theme_override_fonts/font = ExtResource("1_n8jym")
+text = "Специально для ВШЭ *"
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 27.0
+offset_top = 108.0
+offset_right = 225.0
+offset_bottom = 148.0
+theme_override_fonts/font = ExtResource("1_n8jym")
+theme_override_font_sizes/font_size = 40
+text = "Volume"
+
+[node name="HSlider" type="HSlider" parent="."]
+offset_left = 33.0
+offset_top = 162.0
+offset_right = 358.0
+offset_bottom = 178.0
+
+[connection signal="changed" from="HSlider" to="." method="_on_h_slider_changed"]
