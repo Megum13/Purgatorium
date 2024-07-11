@@ -1,0 +1,3070 @@
+[gd_scene load_steps=125 format=3 uid="uid://y3w4vo0ayh3w"]
+
+[ext_resource type="Texture2D" uid="uid://bywtt3y6005dk" path="res://Img/Main/Room/room2_3.png" id="1_7r57k"]
+[ext_resource type="Script" path="res://Main.gd" id="1_aey6u"]
+[ext_resource type="Texture2D" uid="uid://dny3ipmkjbmi2" path="res://Img/Main/Room/light.PNG" id="2_dp0rl"]
+[ext_resource type="Texture2D" uid="uid://bpplcsd0jnxms" path="res://Img/Main/Room/table_ver2.PNG" id="2_ljay8"]
+[ext_resource type="AudioStream" uid="uid://rvidl0dlrkp4" path="res://Audio/projector.mp3" id="4_msteo"]
+[ext_resource type="Texture2D" uid="uid://cf6ba1u86putp" path="res://Img/Main/Demon/belki2.png" id="5_b4qwd"]
+[ext_resource type="Script" path="res://Demon.gd" id="5_g0oll"]
+[ext_resource type="Texture2D" uid="uid://dc4jtf7e5tadr" path="res://Img/Main/Room/telek.png" id="6_he3qu"]
+[ext_resource type="Texture2D" uid="uid://bc2hsarhc8voe" path="res://Img/Main/Demon/cat_eyes.png" id="6_oc1iy"]
+[ext_resource type="Texture2D" uid="uid://c3spa654o6346" path="res://Img/Main/Demon/eyes.png" id="7_6qtdx"]
+[ext_resource type="Texture2D" uid="uid://bpem883o2dipu" path="res://Img/Main/Demon/ebaki_vmeste.png" id="12_184r4"]
+[ext_resource type="Texture2D" uid="uid://vcw8m7onub1s" path="res://Img/Main/Items/gun_ver3.png" id="12_mmcll"]
+[ext_resource type="AudioStream" uid="uid://bkufnpn4w55hd" path="res://Audio/hvat.mp3" id="13_6buny"]
+[ext_resource type="Texture2D" uid="uid://b68qq3usb2dk2" path="res://Img/Main/Demon/angel_healing_ver5.png" id="13_cjae8"]
+[ext_resource type="Shader" path="res://Gun.gdshader" id="13_jy1b2"]
+[ext_resource type="Script" path="res://Gun.gd" id="13_tqr3f"]
+[ext_resource type="Texture2D" uid="uid://dsbku680em628" path="res://Img/Main/Demon/angel_smotrit_patron_part1.png" id="14_f1mmj"]
+[ext_resource type="AudioStream" uid="uid://cg75uh1l4uc1y" path="res://Audio/vzmah.mp3" id="14_ixani"]
+[ext_resource type="Texture2D" uid="uid://cshk3wj7r7k25" path="res://Img/Main/Demon/angel_smotrit_patron_part2.png" id="15_4ga8o"]
+[ext_resource type="Texture2D" uid="uid://bqfae00t78jy1" path="res://Img/Main/Demon/reloading_bez_gilz.png" id="16_f0sxq"]
+[ext_resource type="Texture2D" uid="uid://be5uo0k0x70vw" path="res://Img/Main/Player/na_angela.png" id="16_ogaus"]
+[ext_resource type="Texture2D" uid="uid://cjd61kot8peey" path="res://Img/Main/Player/hvat.png" id="17_4j2a1"]
+[ext_resource type="Texture2D" uid="uid://d2oeglonvt6k8" path="res://Img/Main/Demon/angel_kidaet_monetu.png" id="17_clf25"]
+[ext_resource type="Texture2D" uid="uid://c088sw15sjc6s" path="res://Img/Main/Demon/reloading_s_gilzami_ver3.png" id="17_r4k2h"]
+[ext_resource type="Shader" path="res://Main.gdshader" id="17_vxt5k"]
+[ext_resource type="AudioStream" uid="uid://bhf2kih2d0iv" path="res://Audio/NewAudio/ShotDie.mp3" id="18_gn53w"]
+[ext_resource type="AudioStream" uid="uid://cpdlrdvcdln7q" path="res://Audio/NewAudio/Shot.mp3" id="19_awedd"]
+[ext_resource type="Texture2D" uid="uid://il8fvcymaup4" path="res://Img/Main/Player/na_sebya.png" id="20_cccf5"]
+[ext_resource type="AudioStream" uid="uid://cvm4pmdj5r0f3" path="res://Audio/click.mp3" id="20_onofq"]
+[ext_resource type="AudioStream" uid="uid://o32l4ad1o3m5" path="res://Audio/NewAudio/mozgi.mp3" id="20_ubb7i"]
+[ext_resource type="Texture2D" uid="uid://7qix8dt7wepk" path="res://Img/Main/Demon/angel_shots_gg.png" id="21_3xqgl"]
+[ext_resource type="AudioStream" uid="uid://c8l4x66amar3f" path="res://Audio/NewAudio/Reload3.mp3" id="21_c34h7"]
+[ext_resource type="Texture2D" uid="uid://ddr4sb6416syg" path="res://Img/Main/Demon/angel_shots_himself.png" id="22_7mybg"]
+[ext_resource type="AudioStream" uid="uid://cyfy4ac02bci4" path="res://Audio/NewAudio/Reload2.mp3" id="22_ggqwf"]
+[ext_resource type="AudioStream" uid="uid://bxgg2jjgdfwe4" path="res://Audio/NewAudio/reload1.mp3" id="23_3r3gt"]
+[ext_resource type="AudioStream" uid="uid://dk5oa16ebow03" path="res://Audio/NewAudio/itemGrab.mp3" id="24_tbtnd"]
+[ext_resource type="AudioStream" uid="uid://bhh0r8rw2a7j4" path="res://Audio/NewAudio/itemDrop.mp3" id="25_gdlyb"]
+[ext_resource type="AudioStream" uid="uid://dlorv7an7k307" path="res://Audio/beep1.mp3" id="35_75c1d"]
+[ext_resource type="Texture2D" uid="uid://blaaxrsyuxqxc" path="res://Img/Main/Items/blood.png" id="35_gyqce"]
+[ext_resource type="Texture2D" uid="uid://dgpvh68tpwmsw" path="res://Img/Main/Player/SpritesItem/patroni_smoret'_part1.png" id="35_trrwe"]
+[ext_resource type="Texture2D" uid="uid://yahxnafsa3vk" path="res://Img/Main/Player/SpritesItem/patroni_smoret'_part2_bez_drobinok.png" id="36_j3om2"]
+[ext_resource type="AudioStream" uid="uid://bd22gvw6hv221" path="res://Audio/beep2.mp3" id="36_px0k7"]
+[ext_resource type="Texture2D" uid="uid://ccchvyy6hltw2" path="res://Img/Main/Items/korobka.png" id="37_fmqbh"]
+[ext_resource type="Texture2D" uid="uid://4fjjnusg3kla" path="res://Img/Main/Player/SpritesItem/patroni_smoret'_part2_s_drobinkami.png" id="37_hpo5w"]
+[ext_resource type="Script" path="res://Box.gd" id="37_yp0pg"]
+[ext_resource type="Texture2D" uid="uid://suda0cpu5lxy" path="res://Img/Main/Player/SpritesItem/patroni_smoret'_part2_s_drobinkami_v odnom_patrone.png" id="38_v18qe"]
+[ext_resource type="Script" path="res://PauseMenu.gd" id="39_c4kqk"]
+[ext_resource type="Texture2D" uid="uid://nitcppm7qjh7" path="res://Img/Main/Player/SpritesItem/skip_hoda_angela.png" id="39_cphvw"]
+[ext_resource type="Texture2D" uid="uid://d4mpyoix264g2" path="res://Img/Main/Player/SpritesItem/skip_hoda_igroka.png" id="40_7hxam"]
+[ext_resource type="Texture2D" uid="uid://crq5cf0fp756l" path="res://Img/Main/Items/moneta.png" id="41_c0jp5"]
+[ext_resource type="Texture2D" uid="uid://dics3krswdgvv" path="res://Img/Main/Player/SpritesItem/sprite_heal_ver5.png" id="41_csd6r"]
+[ext_resource type="Texture2D" uid="uid://vpjukh85iddv" path="res://Img/Main/Items/implantat.png" id="42_7bv2b"]
+[ext_resource type="Texture2D" uid="uid://fmd5f1npgakn" path="res://Img/Main/Player/SpritesItem/use_shulerski_patron_left.png" id="42_b4wik"]
+[ext_resource type="Texture2D" uid="uid://cnihcqqmf1o6w" path="res://Img/Main/Items/heal2.png" id="43_kldul"]
+[ext_resource type="AudioStream" uid="uid://d2b8ya602q3t1" path="res://Audio/TreskNew.mp3" id="43_obwdm"]
+[ext_resource type="Texture2D" uid="uid://btx7wbvjau1pm" path="res://Img/Main/Items/shulerski_patron.png" id="44_ksgvn"]
+[ext_resource type="AudioStream" uid="uid://dn6evf1dp4a46" path="res://Audio/LopnulaBanka.mp3" id="44_tbb81"]
+[ext_resource type="AudioStream" uid="uid://c47mm1d3upp4h" path="res://Audio/zvon-monetki.mp3" id="45_7tvdy"]
+[ext_resource type="AudioStream" uid="uid://baggg8ncv1sjh" path="res://Audio/Myaso.mp3" id="46_duuxt"]
+[ext_resource type="AudioStream" uid="uid://dbiee5r4d3237" path="res://Audio/RentGen.mp3" id="47_1bb6p"]
+[ext_resource type="AudioStream" uid="uid://cotidxod6rib" path="res://Audio/Heart.mp3" id="52_38xc7"]
+[ext_resource type="AudioStream" uid="uid://kt30ha10apm0" path="res://Audio/BoxOpen.mp3" id="52_w5b2f"]
+[ext_resource type="AudioStream" uid="uid://wpmgey873cr5" path="res://Audio/electric_001.mp3" id="53_7pncu"]
+[ext_resource type="AudioStream" uid="uid://dj88b8r1dhgte" path="res://Audio/BoxClose.mp3" id="53_djcig"]
+[ext_resource type="AudioStream" uid="uid://boed715oqiu1s" path="res://Audio/BoxBlob.mp3" id="54_5n6le"]
+[ext_resource type="AudioStream" uid="uid://dvq3grvfpkxii" path="res://Audio/Vzdoh.mp3" id="54_mho5s"]
+[ext_resource type="Texture2D" uid="uid://duuxuiwpoovcd" path="res://Img/Room/lightning2.png" id="55_tc8yt"]
+[ext_resource type="AudioStream" uid="uid://dqycs131i24yi" path="res://Audio/neco-arc-sound-effect.mp3" id="57_y16aw"]
+[ext_resource type="AudioStream" uid="uid://buwtrfjb5vxh6" path="res://Audio/MarioMoney.mp3" id="60_236ng"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_os7wu"]
+shader = ExtResource("17_vxt5k")
+shader_parameter/pixel_size = 2.1
+
+[sub_resource type="Animation" id="Animation_0i8wn"]
+resource_name = "FirstLights"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Lights/Light3:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Lights/Light3:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Lights/Projector:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_h6jm1"]
+length = 0.001
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8wqj6"]
+_data = {
+"FirstLights": SubResource("Animation_0i8wn"),
+"RESET": SubResource("Animation_h6jm1")
+}
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_nx3f2"]
+shader = ExtResource("13_jy1b2")
+shader_parameter/line_thickness = 0.0
+shader_parameter/on = false
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7c0ef"]
+size = Vector2(601.5, 616.5)
+
+[sub_resource type="Animation" id="Animation_bl4g1"]
+resource_name = "DropGun"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../AngelShotsHimself:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.07, 0.14, 0.21, 0.28, 0.35),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [5, 4, 3, 2, 1, 0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../AngelShotsHimself:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.42),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [Vector2(0, 250), Vector2(-3000, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../TableVer2/Gun:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.42),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="Animation" id="Animation_quvmb"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../AngelShotsGg:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../AngelShotsGg:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-3000, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../AngelShotsHimself:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-3000, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../AngelShotsHimself:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AnimationSprite/AngelHealingVer5:frame")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("AnimationSprite/AngelHealingVer5:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(5690, -312)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("AnimationSprite/AngelHealingVer5:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("../TableVer2/AngelKidaetMonetu:frame")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("../TableVer2/AngelKidaetMonetu:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(6402, -907)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("AnimationSprite/AngelSmotritPatronPart1:frame")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("AnimationSprite/AngelSmotritPatronPart1:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(7043, -1559)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("AnimationSprite/AngelSmotritPatronPart1:modulate")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("AnimationSprite/AngelSmotritPatronPart2:frame")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("AnimationSprite/AngelSmotritPatronPart2:position")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(6635, -557)]
+}
+
+[sub_resource type="Animation" id="Animation_w6w3i"]
+resource_name = "ToDemon"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../AngelShotsHimself:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.06, 0.12, 0.18, 0.24, 0.3, 0.36, 0.42),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../AngelShotsHimself:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.12, 0.48),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 250), Vector2(0, 250), Vector2(-130, 250)]
+}
+
+[sub_resource type="Animation" id="Animation_sufm7"]
+resource_name = "ToPlayer"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../AngelShotsGg:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.06, 0.12, 0.18, 0.24, 0.3, 0.36, 0.42, 0.48),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../AngelShotsGg:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2(0, 250)]
+}
+
+[sub_resource type="Animation" id="Animation_p4dky"]
+resource_name = "Heal"
+length = 1.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationSprite/AngelHealingVer5:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.07, 0.14, 0.21, 0.28, 0.35, 0.42, 0.49),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimationSprite/AngelHealingVer5:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.21, 0.28, 0.35),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [Vector2(0, 0), Vector2(0, 0), Vector2(100, 0), Vector2(200, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AnimationSprite/AngelHealingVer5:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.7, 1.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../Player/AudioItem/LopnulaBanka:playing")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.4),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_wskdh"]
+resource_name = "Money"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../TableVer2/AngelKidaetMonetu:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.049, 0.098, 0.147, 0.196, 0.245, 0.294, 0.343, 0.392, 0.441, 0.49),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../TableVer2/AngelKidaetMonetu:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [Vector2(-20, 110), Vector2(0, 1000)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../Player/AudioItem/ZvonMonetky:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_qr58p"]
+resource_name = "ImplantPart1"
+length = 0.9
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationSprite/AngelSmotritPatronPart1:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.07, 0.14, 0.21, 0.28, 0.35, 0.42, 0.49),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimationSprite/AngelSmotritPatronPart1:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AnimationSprite/AngelSmotritPatronPart1:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.5, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../Player/AudioItem/Meat:playing")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.4),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_m5d4v"]
+resource_name = "ImplantPart2"
+length = 1.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimationSprite/AngelSmotritPatronPart2:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.07, 0.14, 0.21, 0.28, 0.35, 0.42, 0.49, 0.56, 0.63, 0.7, 0.77, 0.84, 0.91, 0.98),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 6, 5, 4, 3, 2, 1, 0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimationSprite/AngelSmotritPatronPart2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.05),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [Vector2(0, 100), Vector2(0, 2000)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../TableVer2/Gun:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.05212),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../Player/AudioItem/RentGen:playing")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.0129483),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_kged0"]
+_data = {
+"DropGun": SubResource("Animation_bl4g1"),
+"Heal": SubResource("Animation_p4dky"),
+"ImplantPart1": SubResource("Animation_qr58p"),
+"ImplantPart2": SubResource("Animation_m5d4v"),
+"Money": SubResource("Animation_wskdh"),
+"RESET": SubResource("Animation_quvmb"),
+"ToDemon": SubResource("Animation_w6w3i"),
+"ToPlayer": SubResource("Animation_sufm7")
+}
+
+[sub_resource type="Animation" id="Animation_5ad1x"]
+resource_name = "Die"
+length = 4.0
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.05, 2.85),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0.7, 0.7), Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.05, 2.85),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0.0430392, 0.0430392, 0.0430392, 1), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.05, 3.55),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [true],
+"method": &"setEyeShaking"
+}, {
+"args": [false],
+"method": &"setEyeShaking"
+}]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.05, 3.55),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [1],
+"method": &"eyeSwitch"
+}, {
+"args": [0],
+"method": &"eyeSwitch"
+}]
+}
+tracks/4/type = "method"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath(".")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.05),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"offRedLine"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_17syl"]
+resource_name = "RESET"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wc2kk"]
+_data = {
+"Die": SubResource("Animation_5ad1x"),
+"RESET": SubResource("Animation_17syl")
+}
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_bix7l"]
+shader = ExtResource("13_jy1b2")
+shader_parameter/line_thickness = 0.0
+shader_parameter/on = false
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_aiqwo"]
+radius = 25.9672
+height = 198.525
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wsofr"]
+radius = 26.9394
+height = 145.9
+
+[sub_resource type="Animation" id="Animation_3186a"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ReloadingSGilzamiVer3:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ReloadingBezGilz:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ReloadingBezGilz:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -1500)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("ReloadingSGilzamiVer3:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -1500)]
+}
+
+[sub_resource type="Animation" id="Animation_8qyxg"]
+resource_name = "ReloadNotBuckshot"
+length = 1.2
+step = 0.09
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ReloadingBezGilz:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.09, 0.18, 0.27, 0.36, 0.45, 0.54, 0.63, 0.72, 0.81, 0.9, 0.99, 1.08),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ReloadingBezGilz:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.17),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [Vector2(0, -100), Vector2(0, -1500)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("GunVer3:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.17),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Reload:playing")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.36),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Reload2:playing")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.54),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Reload3:playing")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.63),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("ItemGrab:playing")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(1.17),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/7/type = "method"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("../../..")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0.27),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"spawnBuckshots"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_vs0ko"]
+resource_name = "ReloadWithBuckshot"
+length = 1.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ReloadingSGilzamiVer3:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.075, 0.15, 0.225, 0.3, 0.375, 0.45, 0.525, 0.6, 0.675, 0.75, 0.825, 0.9, 0.975, 1.05, 1.125, 1.2, 1.275),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ReloadingSGilzamiVer3:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.35),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [Vector2(0, -100), Vector2(0, -1500)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("GunVer3:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.35),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Reload:playing")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.36),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Reload2:playing")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.8),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Reload3:playing")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.9),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("ItemGrab:playing")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(1.3),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/7/type = "method"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("../../..")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0.4),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"spawnBuckshots"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_dfwdv"]
+_data = {
+"RESET": SubResource("Animation_3186a"),
+"ReloadNotBuckshot": SubResource("Animation_8qyxg"),
+"ReloadWithBuckshot": SubResource("Animation_vs0ko")
+}
+
+[sub_resource type="Animation" id="Animation_eg3f3"]
+resource_name = "DemonToPlayer"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("NaAngela:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.056, 0.112, 0.168, 0.224),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [6, 5, 4, 3, 2]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("NaSebya:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.224, 0.28, 0.336, 0.392, 0.448, 0.504),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [2, 3, 4, 5, 6, 7]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("NaAngela:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.224),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [Vector2(0, 250), Vector2(0, 1000)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("NaSebya:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.224),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [Vector2(0, 1000), Vector2(0, 250)]
+}
+
+[sub_resource type="Animation" id="Animation_nh4pb"]
+resource_name = "DieAnimation"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../../Lights/Light4:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.6, 1.7, 1.9, 3.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 1), Color(0, 0, 0, 0), Color(1, 1, 1, 0.564706), Color(0, 0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AudioItem/Heart:playing")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1.5),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AudioItem/Electro:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1.6),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AudioItem/Vzdoh:playing")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(3.1),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_kh2d8"]
+resource_name = "DropGun"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("NaSebya:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [5, 4]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("NaSebya:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [Vector2(0, 250), Vector2(0, 1000)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../TableVer2/Gun/GunVer3:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="Animation" id="Animation_joaou"]
+resource_name = "Hvat"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Hvat:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 0, 1, 2, 3, 4, 5, 6, 7]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Hvat:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.45),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [Vector2(0, 1000), Vector2(0, 0), Vector2(0, 1000)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Hvat/AudioStreamPlayer:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.2),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Hvat/AudioStreamPlayer2:playing")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_3r5ly"]
+resource_name = "PlayerToDemon"
+length = 0.6
+step = 0.056
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("NaAngela:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.28, 0.336, 0.392, 0.448, 0.504),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [2, 3, 4, 5, 6]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("NaSebya:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.056, 0.112, 0.168, 0.224, 0.28),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [7, 6, 5, 4, 3, 2]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("NaAngela:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.28),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [Vector2(0, 1000), Vector2(0, 250)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("NaSebya:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.28),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [Vector2(0, 250), Vector2(0, 1000)]
+}
+
+[sub_resource type="Animation" id="Animation_hd6sd"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Hvat:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("NaAngela:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("NaSebya:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("NaAngela:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 6.4e-05, 0.000128, 0.000192),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [Vector2(0, 1000), Vector2(1174, 1553), Vector2(1174, 1553), Vector2(0, 1000)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Hvat:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 1000)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("NaSebya:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 1000)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("../../Lights/Light4:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("ItemSprites/SpriteHealVer5:frame")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("ItemSprites/SpriteHealVer5:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2(-3222, 2053)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("ItemSprites/SkipHodaAngela:frame")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("ItemSprites/SkipHodaAngela:position")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-7739, 295)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("ItemSprites/SkipHodaIgroka:frame")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("ItemSprites/SkipHodaIgroka:position")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-6924, 295)]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("ItemSprites/PatroniSmoret\'Part1:frame")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("ItemSprites/PatroniSmoret\'Part1:position")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-7578, 1907)]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("ItemSprites/Light4:modulate")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0)]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("ItemSprites/PatroniSmoret\'Part2BezDrobinok:frame")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("ItemSprites/PatroniSmoret\'Part2BezDrobinok:position")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-4105, 1863)]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("ItemSprites/PatroniSmoret\'Part2SDrobinkamiVOdnomPatrone:frame")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("ItemSprites/PatroniSmoret\'Part2SDrobinkamiVOdnomPatrone:position")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-6319, 1888)]
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("ItemSprites/PatroniSmoret\'Part2SDrobinkami:frame")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/21/type = "value"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath("ItemSprites/PatroniSmoret\'Part2SDrobinkami:position")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-5259, 1885)]
+}
+tracks/22/type = "value"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath("ItemSprites/UseShulerskiPatronLeft:frame")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/23/type = "value"
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/path = NodePath("ItemSprites/UseShulerskiPatronLeft:position")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-4248, -440)]
+}
+
+[sub_resource type="Animation" id="Animation_py2mk"]
+resource_name = "ToDemon"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("NaAngela:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.064, 0.128, 0.192, 0.256, 0.32, 0.384, 0.448),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 0, 1, 2, 3, 4, 5, 6]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("NaAngela:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 6.4e-05, 0.000128, 0.000192, 0.064),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [Vector2(0, 1000), Vector2(1174, 1553), Vector2(1174, 1553), Vector2(0, 1000), Vector2(0, 250)]
+}
+
+[sub_resource type="Animation" id="Animation_3mbpi"]
+resource_name = "ToPlayer"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("NaSebya:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0576, 0.1152, 0.1728, 0.2304, 0.288, 0.3456, 0.4032, 0.4608),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 0, 1, 2, 3, 4, 5, 6, 7]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("NaSebya:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.0576),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [Vector2(0, 1000), Vector2(0, 250)]
+}
+
+[sub_resource type="Animation" id="Animation_ak6en"]
+resource_name = "Heal"
+length = 1.8
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ItemSprites/SpriteHealVer5:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.08, 0.16, 0.24, 0.72, 0.8, 0.88, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ItemSprites/SpriteHealVer5:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [Vector2(0, 250), Vector2(0, -4000)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AudioItem/Tresk:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.32),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AudioItem/LopnulaBanka:playing")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.8, 1.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_cbigm"]
+resource_name = "Money1"
+length = 1.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ItemSprites/SkipHodaAngela:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.07, 0.14, 0.21, 0.28, 0.35, 0.42, 0.49, 0.56, 0.63, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ItemSprites/SkipHodaAngela:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [Vector2(0, 250), Vector2(0, -5656)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AudioItem/ZvonMonetky:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_lvhqe"]
+resource_name = "Money2"
+length = 1.4
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ItemSprites/SkipHodaIgroka:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.07, 0.14, 0.21, 0.28, 0.35, 0.42, 0.49, 0.56, 0.63, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ItemSprites/SkipHodaIgroka:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [Vector2(0, 250), Vector2(0, -4242)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AudioItem/ZvonMonetky:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_ewfip"]
+resource_name = "RentgenStart"
+length = 1.6
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ItemSprites/PatroniSmoret\'Part1:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.08, 0.16, 0.24, 0.56, 0.64, 0.72, 0.8, 0.88),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 3, 4, 5, 6, 7]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ItemSprites/PatroniSmoret\'Part1:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [Vector2(0, 0), Vector2(0, -4544)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ItemSprites/Light4:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.8, 0.96, 1.36, 1.52),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1), Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AudioItem/Meat:playing")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.9),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_g6nmf"]
+resource_name = "RentgenWith0Buckshots"
+length = 2.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ItemSprites/PatroniSmoret\'Part2BezDrobinok:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.08, 0.16, 0.24, 0.32, 0.4, 0.48, 0.56, 1.5, 1.58, 1.66, 1.74, 1.82, 1.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 7, 6, 5, 3, 2, 1]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ItemSprites/PatroniSmoret\'Part2BezDrobinok:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [Vector2(0, 0), Vector2(0, -5555)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AudioItem/RentGen:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../TableVer2/Gun:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 2.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="Animation" id="Animation_6a5rv"]
+resource_name = "RentgenWith1Buckshots"
+length = 2.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ItemSprites/PatroniSmoret\'Part2SDrobinkamiVOdnomPatrone:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.08, 0.16, 0.24, 0.32, 0.4, 0.48, 0.56, 1.5, 1.58, 1.66, 1.74, 1.82, 1.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 7, 6, 5, 4, 3, 2]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ItemSprites/PatroniSmoret\'Part2SDrobinkamiVOdnomPatrone:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [Vector2(0, 0), Vector2(0, -5555)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AudioItem/RentGen:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../TableVer2/Gun:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 2.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="Animation" id="Animation_mmp86"]
+resource_name = "RentgenWith2Buckshots"
+length = 2.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ItemSprites/PatroniSmoret\'Part2SDrobinkami:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.08, 0.16, 0.24, 0.32, 0.4, 0.48, 0.56, 1.5, 1.58, 1.66, 1.74, 1.82, 1.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 7, 6, 5, 4, 3, 2]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ItemSprites/PatroniSmoret\'Part2SDrobinkami:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [Vector2(0, 0), Vector2(0, -5555)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AudioItem/RentGen:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../TableVer2/Gun:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 2.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_sl4xt"]
+_data = {
+"DemonToPlayer": SubResource("Animation_eg3f3"),
+"DieAnimation": SubResource("Animation_nh4pb"),
+"DropGun": SubResource("Animation_kh2d8"),
+"Heal": SubResource("Animation_ak6en"),
+"Hvat": SubResource("Animation_joaou"),
+"Money1": SubResource("Animation_cbigm"),
+"Money2": SubResource("Animation_lvhqe"),
+"PlayerToDemon": SubResource("Animation_3r5ly"),
+"RESET": SubResource("Animation_hd6sd"),
+"RentgenStart": SubResource("Animation_ewfip"),
+"RentgenWith0Buckshots": SubResource("Animation_g6nmf"),
+"RentgenWith1Buckshots": SubResource("Animation_6a5rv"),
+"RentgenWith2Buckshots": SubResource("Animation_mmp86"),
+"ToDemon": SubResource("Animation_py2mk"),
+"ToPlayer": SubResource("Animation_3mbpi")
+}
+
+[sub_resource type="Animation" id="Animation_rnveu"]
+resource_name = "Blood"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Blood:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_vfb0o"]
+resource_name = "RESET"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Blood:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.1),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_yo1ag"]
+_data = {
+"Blood": SubResource("Animation_rnveu"),
+"RESET": SubResource("Animation_vfb0o")
+}
+
+[sub_resource type="Animation" id="Animation_trn1m"]
+resource_name = "LastBuckshots"
+length = 2.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ShotBuckShots:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 0.8, 1.3, 1.6, 2.1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [true, false, true, false, true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("beep2:playing")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.8, 1.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [true, true, true]
+}
+
+[sub_resource type="Animation" id="Animation_6okkr"]
+resource_name = "RoundStart"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BuckshotsStart:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 0.8, 1.3, 1.6, 2.1, 2.4, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [true, false, true, false, true, false, true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("beep1:playing")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.8, 1.6, 2.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [true, true, true, true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ShotBuckShots:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_35c02"]
+_data = {
+"LastBuckshots": SubResource("Animation_trn1m"),
+"RoundStart": SubResource("Animation_6okkr")
+}
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_f8e17"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n7seo"]
+size = Vector2(607.922, 566.582)
+
+[sub_resource type="Animation" id="Animation_vi6hh"]
+resource_name = "End"
+length = 0.33
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/Korobka:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(960, 850), Vector2(960, 1500)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.3),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CanvasLayer:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.3),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("BoxClose:playing")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_s10dw"]
+resource_name = "Start"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/Korobka:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.2, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(960, 1500), Vector2(960, 850)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CanvasLayer:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("BoxOpen:playing")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1hsrk"]
+_data = {
+"End": SubResource("Animation_vi6hh"),
+"Start": SubResource("Animation_s10dw")
+}
+
+[sub_resource type="Animation" id="Animation_mvgnt"]
+resource_name = "RESET"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/Korobka/ItemForAimation:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/Korobka/ItemForAimation:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CanvasLayer/Korobka/ItemForAimation:position")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -75)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CanvasLayer/RichTextLabel:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_fj5dg"]
+resource_name = "show"
+length = 2.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/Korobka/ItemForAimation:modulate")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/Korobka/ItemForAimation:position")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, -75), Vector2(0, -330)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CanvasLayer/Korobka/ItemForAimation:scale")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.3, 1.3)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CanvasLayer/RichTextLabel:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qq0wr"]
+_data = {
+"RESET": SubResource("Animation_mvgnt"),
+"show": SubResource("Animation_fj5dg")
+}
+
+[node name="Node2D" type="Node2D"]
+position = Vector2(960, 540)
+script = ExtResource("1_aey6u")
+
+[node name="Background music" type="Node" parent="."]
+
+[node name="First" type="AudioStreamPlayer2D" parent="Background music"]
+autoplay = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+material = SubResource("ShaderMaterial_os7wu")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+metadata/_edit_lock_ = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_8wqj6")
+}
+
+[node name="Lights" type="Node2D" parent="."]
+metadata/_edit_lock_ = true
+
+[node name="Light" type="Sprite2D" parent="Lights"]
+position = Vector2(-462, -319)
+texture = ExtResource("2_dp0rl")
+metadata/_edit_lock_ = true
+
+[node name="Light2" type="Sprite2D" parent="Lights"]
+position = Vector2(445, -352)
+texture = ExtResource("2_dp0rl")
+metadata/_edit_lock_ = true
+
+[node name="Light4" type="Sprite2D" parent="Lights"]
+modulate = Color(0, 0, 0, 0)
+z_index = 1
+position = Vector2(-72.3676, -260.346)
+scale = Vector2(102.69, 56.0538)
+texture = ExtResource("2_dp0rl")
+metadata/_edit_lock_ = true
+
+[node name="Light3" type="Sprite2D" parent="Lights"]
+modulate = Color(1, 1, 1, 0)
+z_index = 1
+position = Vector2(-6.49993, -30.6762)
+scale = Vector2(10.1336, 7.48691)
+texture = ExtResource("2_dp0rl")
+metadata/_edit_lock_ = true
+
+[node name="Projector" type="AudioStreamPlayer2D" parent="Lights"]
+stream = ExtResource("4_msteo")
+
+[node name="Room23" type="Sprite2D" parent="."]
+texture = ExtResource("1_7r57k")
+metadata/_edit_lock_ = true
+
+[node name="Telek" type="Sprite2D" parent="Room23"]
+texture = ExtResource("6_he3qu")
+metadata/_edit_lock_ = true
+
+[node name="Demon" type="Node2D" parent="Room23"]
+script = ExtResource("5_g0oll")
+
+[node name="Belki2" type="Sprite2D" parent="Room23/Demon"]
+position = Vector2(1, 40)
+texture = ExtResource("5_b4qwd")
+
+[node name="CatEye" type="CanvasGroup" parent="Room23/Demon"]
+visible = false
+position = Vector2(1, 40)
+
+[node name="CatEyes" type="Sprite2D" parent="Room23/Demon/CatEye"]
+texture = ExtResource("6_oc1iy")
+hframes = 6
+frame = 4
+
+[node name="CatEyes3" type="Sprite2D" parent="Room23/Demon/CatEye"]
+texture = ExtResource("6_oc1iy")
+hframes = 6
+frame = 3
+
+[node name="CatEyes6" type="Sprite2D" parent="Room23/Demon/CatEye"]
+texture = ExtResource("6_oc1iy")
+hframes = 6
+frame = 2
+
+[node name="CatEyes5" type="Sprite2D" parent="Room23/Demon/CatEye"]
+texture = ExtResource("6_oc1iy")
+hframes = 6
+frame = 1
+
+[node name="CatEyes7" type="Sprite2D" parent="Room23/Demon/CatEye"]
+texture = ExtResource("6_oc1iy")
+hframes = 6
+frame = 5
+
+[node name="CatEyes4" type="Sprite2D" parent="Room23/Demon/CatEye"]
+texture = ExtResource("6_oc1iy")
+hframes = 6
+
+[node name="Eye" type="CanvasGroup" parent="Room23/Demon"]
+position = Vector2(1, 40)
+
+[node name="Eyes2" type="Sprite2D" parent="Room23/Demon/Eye"]
+texture = ExtResource("7_6qtdx")
+hframes = 6
+frame = 1
+
+[node name="Eyes6" type="Sprite2D" parent="Room23/Demon/Eye"]
+texture = ExtResource("7_6qtdx")
+hframes = 6
+frame = 5
+
+[node name="Eyes5" type="Sprite2D" parent="Room23/Demon/Eye"]
+texture = ExtResource("7_6qtdx")
+hframes = 6
+frame = 4
+
+[node name="Eyes4" type="Sprite2D" parent="Room23/Demon/Eye"]
+texture = ExtResource("7_6qtdx")
+hframes = 6
+frame = 3
+
+[node name="Eyes3" type="Sprite2D" parent="Room23/Demon/Eye"]
+texture = ExtResource("7_6qtdx")
+hframes = 6
+frame = 2
+
+[node name="Eyes" type="Sprite2D" parent="Room23/Demon/Eye"]
+texture = ExtResource("7_6qtdx")
+hframes = 6
+
+[node name="Ebaka10" type="Sprite2D" parent="Room23/Demon"]
+material = SubResource("ShaderMaterial_nx3f2")
+position = Vector2(1, 40)
+texture = ExtResource("12_184r4")
+hframes = 2
+vframes = 2
+
+[node name="Area2D" type="Area2D" parent="Room23/Demon"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Room23/Demon/Area2D"]
+position = Vector2(-11, -121)
+shape = SubResource("RectangleShape2D_7c0ef")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Room23/Demon"]
+libraries = {
+"": SubResource("AnimationLibrary_kged0")
+}
+
+[node name="DemonDieAnimation" type="AnimationPlayer" parent="Room23/Demon"]
+libraries = {
+"": SubResource("AnimationLibrary_wc2kk")
+}
+
+[node name="AnimationSprite" type="Node2D" parent="Room23/Demon"]
+
+[node name="AngelHealingVer5" type="Sprite2D" parent="Room23/Demon/AnimationSprite"]
+position = Vector2(5690, -312)
+texture = ExtResource("13_cjae8")
+hframes = 8
+
+[node name="AngelSmotritPatronPart1" type="Sprite2D" parent="Room23/Demon/AnimationSprite"]
+position = Vector2(7043, -1559)
+texture = ExtResource("14_f1mmj")
+hframes = 8
+
+[node name="AngelSmotritPatronPart2" type="Sprite2D" parent="Room23/Demon/AnimationSprite"]
+position = Vector2(6635, -557)
+texture = ExtResource("15_4ga8o")
+hframes = 8
+
+[node name="buchotsSpawn" type="Node2D" parent="Room23"]
+
+[node name="TableVer2" type="Sprite2D" parent="Room23"]
+texture = ExtResource("2_ljay8")
+metadata/_edit_lock_ = true
+
+[node name="DemonItems" type="Node2D" parent="Room23/TableVer2"]
+position = Vector2(-3000, 0)
+metadata/_edit_lock_ = true
+
+[node name="item1" type="Node2D" parent="Room23/TableVer2/DemonItems"]
+position = Vector2(3231, 295)
+metadata/_edit_lock_ = true
+
+[node name="item2" type="Node2D" parent="Room23/TableVer2/DemonItems"]
+position = Vector2(3121, 295)
+metadata/_edit_lock_ = true
+
+[node name="item3" type="Node2D" parent="Room23/TableVer2/DemonItems"]
+position = Vector2(2854, 295)
+metadata/_edit_lock_ = true
+
+[node name="item4" type="Node2D" parent="Room23/TableVer2/DemonItems"]
+position = Vector2(2730, 295)
+metadata/_edit_lock_ = true
+
+[node name="AngelKidaetMonetu" type="Sprite2D" parent="Room23/TableVer2"]
+position = Vector2(6402, -907)
+texture = ExtResource("17_clf25")
+hframes = 11
+
+[node name="Gun" type="Node2D" parent="Room23/TableVer2"]
+position = Vector2(-30, 342)
+rotation = 0.261799
+script = ExtResource("13_tqr3f")
+
+[node name="GunVer3" type="Sprite2D" parent="Room23/TableVer2/Gun"]
+visible = false
+material = SubResource("ShaderMaterial_bix7l")
+texture = ExtResource("12_mmcll")
+
+[node name="Hvat" type="AudioStreamPlayer" parent="Room23/TableVer2/Gun/GunVer3"]
+stream = ExtResource("13_6buny")
+
+[node name="Area2D" type="Area2D" parent="Room23/TableVer2/Gun"]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Room23/TableVer2/Gun/Area2D"]
+position = Vector2(-51, 27)
+rotation = 1.07981
+shape = SubResource("CapsuleShape2D_aiqwo")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Room23/TableVer2/Gun/Area2D"]
+position = Vector2(82, -16)
+rotation = 1.54496
+shape = SubResource("CapsuleShape2D_wsofr")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Room23/TableVer2/Gun"]
+libraries = {
+"": SubResource("AnimationLibrary_dfwdv")
+}
+
+[node name="ReloadingBezGilz" type="Sprite2D" parent="Room23/TableVer2/Gun"]
+position = Vector2(0, -1500)
+texture = ExtResource("16_f0sxq")
+hframes = 13
+
+[node name="ReloadingSGilzamiVer3" type="Sprite2D" parent="Room23/TableVer2/Gun"]
+position = Vector2(0, -1500)
+texture = ExtResource("17_r4k2h")
+hframes = 18
+
+[node name="ShootDie" type="AudioStreamPlayer" parent="Room23/TableVer2/Gun"]
+stream = ExtResource("18_gn53w")
+volume_db = -5.0
+
+[node name="Shoot" type="AudioStreamPlayer" parent="Room23/TableVer2/Gun"]
+stream = ExtResource("19_awedd")
+volume_db = -19.0
+bus = &"Echo"
+
+[node name="Meat" type="AudioStreamPlayer" parent="Room23/TableVer2/Gun"]
+stream = ExtResource("20_ubb7i")
+
+[node name="Reload3" type="AudioStreamPlayer" parent="Room23/TableVer2/Gun"]
+stream = ExtResource("21_c34h7")
+
+[node name="Reload2" type="AudioStreamPlayer" parent="Room23/TableVer2/Gun"]
+stream = ExtResource("22_ggqwf")
+
+[node name="Reload" type="AudioStreamPlayer" parent="Room23/TableVer2/Gun"]
+stream = ExtResource("23_3r3gt")
+
+[node name="ItemGrab" type="AudioStreamPlayer" parent="Room23/TableVer2/Gun"]
+stream = ExtResource("24_tbtnd")
+
+[node name="DropItem" type="AudioStreamPlayer" parent="Room23/TableVer2/Gun"]
+stream = ExtResource("25_gdlyb")
+
+[node name="Click" type="AudioStreamPlayer" parent="Room23/TableVer2/Gun"]
+stream = ExtResource("20_onofq")
+
+[node name="PlayerItems" type="Node2D" parent="Room23/TableVer2"]
+position = Vector2(-3000, 0)
+metadata/_edit_lock_ = true
+
+[node name="item1" type="Node2D" parent="Room23/TableVer2/PlayerItems"]
+position = Vector2(2641, 420)
+metadata/_edit_lock_ = true
+
+[node name="item2" type="Node2D" parent="Room23/TableVer2/PlayerItems"]
+position = Vector2(2827, 420)
+metadata/_edit_lock_ = true
+
+[node name="item3" type="Node2D" parent="Room23/TableVer2/PlayerItems"]
+position = Vector2(3121, 420)
+metadata/_edit_lock_ = true
+
+[node name="item4" type="Node2D" parent="Room23/TableVer2/PlayerItems"]
+position = Vector2(3295, 420)
+metadata/_edit_lock_ = true
+
+[node name="AngelShotsGg" type="Sprite2D" parent="Room23"]
+position = Vector2(-3000, 0)
+texture = ExtResource("21_3xqgl")
+hframes = 8
+
+[node name="AngelShotsHimself" type="Sprite2D" parent="Room23"]
+position = Vector2(-3000, 0)
+texture = ExtResource("22_7mybg")
+hframes = 8
+
+[node name="Player" type="Node2D" parent="Room23"]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Room23/Player"]
+libraries = {
+"": SubResource("AnimationLibrary_sl4xt")
+}
+
+[node name="Hvat" type="Sprite2D" parent="Room23/Player"]
+position = Vector2(0, 1000)
+texture = ExtResource("17_4j2a1")
+hframes = 8
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Room23/Player/Hvat"]
+stream = ExtResource("13_6buny")
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="Room23/Player/Hvat"]
+stream = ExtResource("14_ixani")
+
+[node name="NaAngela" type="Sprite2D" parent="Room23/Player"]
+position = Vector2(0, 1000)
+texture = ExtResource("16_ogaus")
+hframes = 8
+
+[node name="NaSebya" type="Sprite2D" parent="Room23/Player"]
+position = Vector2(0, 1000)
+texture = ExtResource("20_cccf5")
+hframes = 8
+
+[node name="Blood" type="Sprite2D" parent="Room23/Player"]
+modulate = Color(1, 1, 1, 0)
+texture = ExtResource("35_gyqce")
+
+[node name="BloodAnimation" type="AnimationPlayer" parent="Room23/Player"]
+libraries = {
+"": SubResource("AnimationLibrary_yo1ag")
+}
+
+[node name="ItemSprites" type="Node2D" parent="Room23/Player"]
+
+[node name="PatroniSmoret\'Part1" type="Sprite2D" parent="Room23/Player/ItemSprites"]
+position = Vector2(-7578, 1907)
+texture = ExtResource("35_trrwe")
+hframes = 10
+
+[node name="PatroniSmoret\'Part2BezDrobinok" type="Sprite2D" parent="Room23/Player/ItemSprites"]
+position = Vector2(-4105, 1863)
+texture = ExtResource("36_j3om2")
+hframes = 8
+
+[node name="PatroniSmoret\'Part2SDrobinkami" type="Sprite2D" parent="Room23/Player/ItemSprites"]
+position = Vector2(-5259, 1885)
+texture = ExtResource("37_hpo5w")
+hframes = 8
+
+[node name="PatroniSmoret\'Part2SDrobinkamiVOdnomPatrone" type="Sprite2D" parent="Room23/Player/ItemSprites"]
+position = Vector2(-6319, 1888)
+texture = ExtResource("38_v18qe")
+hframes = 8
+
+[node name="SkipHodaAngela" type="Sprite2D" parent="Room23/Player/ItemSprites"]
+position = Vector2(-7739, 295)
+texture = ExtResource("39_cphvw")
+hframes = 11
+
+[node name="SkipHodaIgroka" type="Sprite2D" parent="Room23/Player/ItemSprites"]
+position = Vector2(-6924, 295)
+texture = ExtResource("40_7hxam")
+hframes = 11
+
+[node name="SpriteHealVer5" type="Sprite2D" parent="Room23/Player/ItemSprites"]
+position = Vector2(-3222, 2053)
+texture = ExtResource("41_csd6r")
+hframes = 8
+
+[node name="UseShulerskiPatronLeft" type="Sprite2D" parent="Room23/Player/ItemSprites"]
+position = Vector2(-4248, -440)
+texture = ExtResource("42_b4wik")
+
+[node name="Light4" type="Sprite2D" parent="Room23/Player/ItemSprites"]
+modulate = Color(0, 0, 0, 0)
+z_index = 1
+position = Vector2(-72.3676, -260.346)
+scale = Vector2(102.69, 56.0538)
+texture = ExtResource("2_dp0rl")
+metadata/_edit_lock_ = true
+
+[node name="AudioItem" type="Node" parent="Room23/Player"]
+
+[node name="Tresk" type="AudioStreamPlayer" parent="Room23/Player/AudioItem"]
+stream = ExtResource("43_obwdm")
+
+[node name="LopnulaBanka" type="AudioStreamPlayer" parent="Room23/Player/AudioItem"]
+stream = ExtResource("44_tbb81")
+
+[node name="ZvonMonetky" type="AudioStreamPlayer" parent="Room23/Player/AudioItem"]
+stream = ExtResource("45_7tvdy")
+
+[node name="Meat" type="AudioStreamPlayer" parent="Room23/Player/AudioItem"]
+stream = ExtResource("46_duuxt")
+
+[node name="RentGen" type="AudioStreamPlayer" parent="Room23/Player/AudioItem"]
+stream = ExtResource("47_1bb6p")
+
+[node name="Heart" type="AudioStreamPlayer" parent="Room23/Player/AudioItem"]
+stream = ExtResource("52_38xc7")
+
+[node name="Electro" type="AudioStreamPlayer" parent="Room23/Player/AudioItem"]
+stream = ExtResource("53_7pncu")
+volume_db = -4.0
+
+[node name="Vzdoh" type="AudioStreamPlayer" parent="Room23/Player/AudioItem"]
+stream = ExtResource("54_mho5s")
+
+[node name="Lightning2" type="Sprite2D" parent="Room23/Player"]
+visible = false
+texture = ExtResource("55_tc8yt")
+
+[node name="Round" type="Label" parent="Room23"]
+offset_left = -659.0
+offset_top = -212.0
+offset_right = -545.0
+offset_bottom = -160.0
+rotation = 0.0285529
+pivot_offset = Vector2(2.20042, 0.767212)
+theme_override_font_sizes/font_size = 39
+text = "0"
+
+[node name="DemonLabel" type="Label" parent="Room23"]
+offset_left = -615.0
+offset_top = -152.0
+offset_right = -501.0
+offset_bottom = -100.0
+rotation = 0.0285529
+pivot_offset = Vector2(2.20042, 0.767212)
+theme_override_font_sizes/font_size = 39
+text = "******"
+
+[node name="PlayerHealtLabel" type="Label" parent="Room23"]
+offset_left = -790.977
+offset_top = -157.063
+offset_right = -676.977
+offset_bottom = -105.063
+rotation = 0.0285529
+pivot_offset = Vector2(2.20042, 0.767212)
+theme_override_font_sizes/font_size = 39
+text = "******"
+
+[node name="TurnRightLabel" type="Label" parent="Room23"]
+visible = false
+offset_left = -555.0
+offset_top = -23.0
+offset_right = -514.0
+offset_bottom = 18.0
+rotation = 0.0628795
+pivot_offset = Vector2(149.574, 122.367)
+theme_override_font_sizes/font_size = 39
+text = ">"
+
+[node name="ReloadLabel" type="Label" parent="Room23"]
+visible = false
+offset_left = -682.0
+offset_top = -90.0
+offset_right = -577.0
+offset_bottom = -49.0
+rotation = 0.0244124
+pivot_offset = Vector2(149.574, 122.367)
+theme_override_font_sizes/font_size = 27
+text = "Reload"
+
+[node name="TurnLeftLabel" type="Label" parent="Room23"]
+offset_left = -785.0
+offset_top = -32.0
+offset_right = -744.0
+offset_bottom = 9.0
+rotation = 0.0628795
+pivot_offset = Vector2(149.574, 122.367)
+theme_override_font_sizes/font_size = 39
+text = "<"
+
+[node name="ShotBuckShots" type="RichTextLabel" parent="Room23"]
+visible = false
+offset_left = -719.0
+offset_top = -71.0
+offset_right = -569.0
+offset_bottom = 7.0
+rotation = 0.0259802
+theme_override_font_sizes/normal_font_size = 26
+bbcode_enabled = true
+text = " [center]█ █"
+
+[node name="BuckshotsStart" type="RichTextLabel" parent="Room23"]
+visible = false
+offset_left = -722.0
+offset_top = -125.0
+offset_right = -545.0
+offset_bottom = -85.0
+rotation = 0.0259802
+bbcode_enabled = true
+text = "█ █ █ █ █ █ █ █"
+
+[node name="TVAnimation" type="AnimationPlayer" parent="Room23"]
+libraries = {
+"": SubResource("AnimationLibrary_35c02")
+}
+
+[node name="beep1" type="AudioStreamPlayer2D" parent="Room23"]
+stream = ExtResource("35_75c1d")
+volume_db = -9.0
+
+[node name="beep2" type="AudioStreamPlayer2D" parent="Room23"]
+stream = ExtResource("36_px0k7")
+volume_db = -9.0
+
+[node name="Moneta" type="Sprite2D" parent="Room23"]
+editor_description = "Айтем для показа
+"
+visible = false
+position = Vector2(-642, -147)
+scale = Vector2(0.5, 0.38)
+texture = ExtResource("41_c0jp5")
+
+[node name="Dialog Layer" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="Sprite2D" type="Sprite2D" parent="Dialog Layer"]
+modulate = Color(0, 0, 0, 0.737255)
+position = Vector2(960, 1080)
+scale = Vector2(1198.08, 469.143)
+texture = SubResource("CanvasTexture_f8e17")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Dialog Layer"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -539.5
+offset_top = -198.0
+offset_right = 539.5
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+theme_override_font_sizes/normal_font_size = 46
+bbcode_enabled = true
+text = "Добро пожаловать, друг, я хочу поиграть с тобой в одну [color=ff0000]игру[/color]. Правила простые"
+scroll_active = false
+shortcut_keys_enabled = false
+deselect_on_focus_loss_enabled = false
+drag_and_drop_selection_enabled = false
+
+[node name="Box" type="Node2D" parent="."]
+process_mode = 3
+visible = false
+position = Vector2(0, 300)
+script = ExtResource("37_yp0pg")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Box"]
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="Box/CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 0.694118)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Box/CanvasLayer"]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -600.0
+offset_top = 100.0
+offset_right = 600.0
+offset_bottom = 389.0
+grow_horizontal = 2
+theme_override_font_sizes/normal_font_size = 45
+bbcode_enabled = true
+
+[node name="Korobka" type="Sprite2D" parent="Box/CanvasLayer"]
+position = Vector2(960, 1500)
+texture = ExtResource("37_fmqbh")
+
+[node name="Area2D" type="Area2D" parent="Box/CanvasLayer/Korobka"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Box/CanvasLayer/Korobka/Area2D"]
+position = Vector2(-1, -17)
+rotation = 0.00189324
+shape = SubResource("RectangleShape2D_n7seo")
+
+[node name="ItemForAimation" type="Node2D" parent="Box/CanvasLayer/Korobka"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(0, -75)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Box"]
+libraries = {
+"": SubResource("AnimationLibrary_1hsrk")
+}
+
+[node name="ShowItem" type="AnimationPlayer" parent="Box"]
+libraries = {
+"": SubResource("AnimationLibrary_qq0wr")
+}
+
+[node name="BoxOpen" type="AudioStreamPlayer" parent="Box"]
+stream = ExtResource("52_w5b2f")
+
+[node name="BoxClose" type="AudioStreamPlayer" parent="Box"]
+stream = ExtResource("53_djcig")
+
+[node name="BoxBlob" type="AudioStreamPlayer" parent="Box"]
+stream = ExtResource("54_5n6le")
+
+[node name="PauseMenu" type="Control" parent="."]
+process_mode = 3
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("39_c4kqk")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="PauseMenu"]
+process_mode = 3
+layer = 3
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="PauseMenu/CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.839216)
+
+[node name="Button2" type="Button" parent="PauseMenu/CanvasLayer"]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 62.0
+offset_top = -240.0
+offset_right = 389.0
+offset_bottom = -156.0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 45
+text = "Продолжить"
+
+[node name="Button" type="Button" parent="PauseMenu/CanvasLayer"]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 62.0
+offset_top = -136.0
+offset_right = 389.0
+offset_bottom = -52.0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 45
+text = "Выйти"
+
+[node name="Label" type="Label" parent="PauseMenu/CanvasLayer"]
+offset_left = 62.0
+offset_top = 60.0
+offset_right = 323.0
+offset_bottom = 159.0
+theme_override_font_sizes/font_size = 45
+text = "Громкость"
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="PauseMenu/CanvasLayer"]
+modulate = Color(1, 1, 1, 0.141176)
+offset_left = 1360.0
+offset_top = 944.0
+offset_right = 1836.0
+offset_bottom = 1043.0
+theme_override_font_sizes/font_size = 45
+text = "Специально для ВШЭ"
+vertical_alignment = 1
+
+[node name="HSlider" type="HSlider" parent="PauseMenu/CanvasLayer"]
+process_mode = 3
+offset_left = 62.0
+offset_top = 159.0
+offset_right = 454.0
+offset_bottom = 228.0
+max_value = 1.0
+step = 0.01
+value = 1.0
+
+[node name="Burenyy" type="AudioStreamPlayer" parent="PauseMenu"]
+process_mode = 3
+stream = ExtResource("57_y16aw")
+volume_db = -10.306
+
+[node name="Items" type="Node2D" parent="."]
+metadata/_edit_lock_ = true
+
+[node name="Moneta" type="Sprite2D" parent="Items"]
+editor_description = "Айтем для показа
+"
+position = Vector2(1270, 928)
+texture = ExtResource("41_c0jp5")
+
+[node name="Implantat" type="Sprite2D" parent="Items"]
+editor_description = "Айтем для показа
+"
+position = Vector2(1699, 928)
+texture = ExtResource("42_7bv2b")
+
+[node name="Heal" type="Sprite2D" parent="Items"]
+editor_description = "Айтем для показа
+"
+position = Vector2(2121, 995)
+texture = ExtResource("43_kldul")
+offset = Vector2(0, -67)
+
+[node name="ShulerskiPatron" type="Sprite2D" parent="Items"]
+editor_description = "Айтем для показа
+"
+position = Vector2(2596, 928)
+texture = ExtResource("44_ksgvn")
+
+[node name="PlayerItems" type="CanvasLayer" parent="."]
+layer = 0
+visible = false
+
+[node name="PanelContainer" type="PanelContainer" parent="PlayerItems"]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -100.0
+offset_right = 100.0
+grow_vertical = 0
+
+[node name="PanelContainer2" type="PanelContainer" parent="PlayerItems"]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 118.0
+offset_top = -100.0
+offset_right = 218.0
+grow_vertical = 0
+
+[node name="PanelContainer3" type="PanelContainer" parent="PlayerItems"]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 236.0
+offset_top = -100.0
+offset_right = 336.0
+grow_vertical = 0
+
+[node name="PanelContainer4" type="PanelContainer" parent="PlayerItems"]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 354.0
+offset_top = -100.0
+offset_right = 454.0
+grow_vertical = 0
+
+[node name="Label" type="Label" parent="PlayerItems"]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 24.0
+offset_top = -136.0
+offset_right = 433.0
+offset_bottom = -99.0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 30
+text = "1            2           3           4"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MarioMoney" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("60_236ng")
+
+[connection signal="gunGrabed" from="." to="Room23/Demon" method="_on_node_2d_gun_grabed"]
+[connection signal="choiseSignal" from="Room23/Demon" to="." method="_on_demon_choise_signal"]
+[connection signal="input_event" from="Room23/Demon/Area2D" to="Room23/Demon" method="_on_area_2d_input_event"]
+[connection signal="mouse_entered" from="Room23/Demon/Area2D" to="Room23/Demon" method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Room23/Demon/Area2D" to="Room23/Demon" method="_on_area_2d_mouse_exited"]
+[connection signal="takeGun" from="Room23/TableVer2/Gun" to="." method="_on_gun_take_gun"]
+[connection signal="input_event" from="Room23/TableVer2/Gun/Area2D" to="Room23/TableVer2/Gun" method="_on_area_2d_input_event"]
+[connection signal="mouse_entered" from="Room23/TableVer2/Gun/Area2D" to="Room23/TableVer2/Gun" method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Room23/TableVer2/Gun/Area2D" to="Room23/TableVer2/Gun" method="_on_area_2d_mouse_exited"]
+[connection signal="input_event" from="Box/CanvasLayer/Korobka/Area2D" to="Box" method="_on_area_2d_input_event"]
+[connection signal="pressed" from="PauseMenu/CanvasLayer/Button2" to="PauseMenu" method="_on_button_2_pressed"]
+[connection signal="pressed" from="PauseMenu/CanvasLayer/Button" to="PauseMenu" method="_on_button_pressed"]
+[connection signal="changed" from="PauseMenu/CanvasLayer/HSlider" to="PauseMenu" method="_on_h_slider_changed"]
+[connection signal="value_changed" from="PauseMenu/CanvasLayer/HSlider" to="PauseMenu" method="_on_h_slider_value_changed"]
+[connection signal="gui_input" from="PlayerItems/PanelContainer" to="." method="_on_panel_container_gui_input"]
+[connection signal="gui_input" from="PlayerItems/PanelContainer2" to="." method="_on_panel_container_2_gui_input"]
+[connection signal="gui_input" from="PlayerItems/PanelContainer3" to="." method="_on_panel_container_3_gui_input"]
+[connection signal="gui_input" from="PlayerItems/PanelContainer4" to="." method="_on_panel_container_4_gui_input"]

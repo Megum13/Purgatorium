@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://dhklrd8v46s53"]
+
+[ext_resource type="Script" path="res://Oshmetki.gd" id="1_v7mbi"]
+[ext_resource type="Texture2D" uid="uid://s2yvwio3m0aa" path="res://Img/Main/Items/oshmetki_1.png" id="2_ygjn0"]
+[ext_resource type="Texture2D" uid="uid://30irkd30ngk0" path="res://Img/Main/Items/oshmetki_2.png" id="3_fuua8"]
+[ext_resource type="AudioStream" uid="uid://o32l4ad1o3m5" path="res://Audio/NewAudio/mozgi.mp3" id="4_5nqq6"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_v7mbi")
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+metadata/_edit_lock_ = true
+
+[node name="Node2D" type="Node2D" parent="RigidBody2D"]
+metadata/_edit_lock_ = true
+
+[node name="Oshmetki1" type="Sprite2D" parent="RigidBody2D/Node2D"]
+visible = false
+texture = ExtResource("2_ygjn0")
+
+[node name="Oshmetki2" type="Sprite2D" parent="RigidBody2D/Node2D"]
+visible = false
+texture = ExtResource("3_fuua8")
+
+[node name="Mozgi" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_5nqq6")
+volume_db = -4.685

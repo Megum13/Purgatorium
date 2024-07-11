@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://dnb17cmeo4qfp"]
+
+[ext_resource type="Script" path="res://Gilza.gd" id="1_va42s"]
+[ext_resource type="Texture2D" uid="uid://2ribnopuhiat" path="res://Img/Main/Items/gilza.png" id="2_kcr82"]
+[ext_resource type="AudioStream" uid="uid://cferrlg4ummtg" path="res://Audio/Drob.mp3" id="3_owkdu"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_881l1"]
+
+[node name="Node2D" type="Node2D"]
+position = Vector2(626, 336)
+script = ExtResource("1_va42s")
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+physics_material_override = SubResource("PhysicsMaterial_881l1")
+gravity_scale = 2.586
+metadata/_edit_lock_ = true
+
+[node name="Gilza" type="Sprite2D" parent="RigidBody2D"]
+texture = ExtResource("2_kcr82")
+metadata/_edit_lock_ = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_owkdu")
+volume_db = -6.559

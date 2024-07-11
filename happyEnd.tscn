@@ -1,0 +1,168 @@
+[gd_scene load_steps=8 format=3 uid="uid://vbgvyo50cdxy"]
+
+[ext_resource type="Texture2D" uid="uid://p6wnun2wb86t" path="res://Img/Final/good_end.png" id="1_ajr2a"]
+[ext_resource type="Script" path="res://happyEnd.gd" id="1_t5by4"]
+[ext_resource type="AudioStream" uid="uid://dpkort16hyacc" path="res://Audio/Menu.mp3" id="3_u15pc"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_x1348"]
+
+[sub_resource type="Animation" id="Animation_3thuw"]
+resource_name = "End"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Control/CanvasLayer/Background:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.2, 4.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Control/CanvasLayer/RichTextLabel:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.1, 4.7),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_vsue2"]
+resource_name = "Start"
+length = 10.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Control/CanvasLayer/Background:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.00652887, 9.86319),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6t2hx"]
+_data = {
+"End": SubResource("Animation_3thuw"),
+"Start": SubResource("Animation_vsue2")
+}
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_t5by4")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+metadata/_edit_use_anchors_ = true
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="Control"]
+visible = false
+
+[node name="Button" type="Button" parent="Control/CanvasLayer2"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -230.0
+offset_top = -143.0
+offset_right = 230.0
+offset_bottom = -11.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 45
+text = "Переиграть"
+
+[node name="Button2" type="Button" parent="Control/CanvasLayer2"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -230.0
+offset_top = 16.0
+offset_right = 230.0
+offset_bottom = 148.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 45
+text = "Выйти
+"
+
+[node name="Label" type="Label" parent="Control/CanvasLayer2"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -180.5
+offset_top = 142.0
+offset_right = 180.5
+offset_bottom = 221.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 40
+text = "Спасибо за игру :3"
+horizontal_alignment = 1
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Control"]
+
+[node name="Background" type="Sprite2D" parent="Control/CanvasLayer"]
+position = Vector2(957, 514)
+texture = ExtResource("1_ajr2a")
+
+[node name="Sprite2D" type="Sprite2D" parent="Control/CanvasLayer"]
+modulate = Color(0, 0, 0, 0.737255)
+position = Vector2(960, 1080)
+scale = Vector2(1198.08, 469.143)
+texture = SubResource("CanvasTexture_x1348")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Control/CanvasLayer"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -539.5
+offset_top = -198.0
+offset_right = 539.5
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+theme_override_font_sizes/normal_font_size = 46
+bbcode_enabled = true
+text = "Не могу в это поверить. Моя душа снова со мной."
+scroll_active = false
+shortcut_keys_enabled = false
+deselect_on_focus_loss_enabled = false
+drag_and_drop_selection_enabled = false
+visible_characters = 0
+visible_ratio = 0.0
+metadata/_edit_use_anchors_ = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_6t2hx")
+}
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_u15pc")
+volume_db = -19.327
+autoplay = true
+
+[connection signal="gui_input" from="Control/CanvasLayer2/Button" to="." method="_on_button_gui_input"]
+[connection signal="gui_input" from="Control/CanvasLayer2/Button2" to="." method="_on_button_2_gui_input"]

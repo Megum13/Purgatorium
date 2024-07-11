@@ -1,0 +1,573 @@
+[gd_scene load_steps=31 format=3 uid="uid://y3w4vo0ayh3w"]
+
+[ext_resource type="Texture2D" uid="uid://bywtt3y6005dk" path="res://Img/Main/Room/room2_3.PNG" id="1_7r57k"]
+[ext_resource type="Script" path="res://Main.gd" id="1_aey6u"]
+[ext_resource type="Texture2D" uid="uid://dny3ipmkjbmi2" path="res://Img/Main/Room/light.PNG" id="2_dp0rl"]
+[ext_resource type="Texture2D" uid="uid://bpplcsd0jnxms" path="res://Img/Main/Room/table_ver2.PNG" id="2_ljay8"]
+[ext_resource type="Texture2D" uid="uid://bngqiqmqw7vra" path="res://Img/Main/Demon/ebaka1_0.png" id="4_yruaf"]
+[ext_resource type="Texture2D" uid="uid://cf6ba1u86putp" path="res://Img/Main/Demon/belki2.png" id="5_b4qwd"]
+[ext_resource type="Script" path="res://Demon.gd" id="5_g0oll"]
+[ext_resource type="Texture2D" uid="uid://bc2hsarhc8voe" path="res://Img/Main/Demon/cat_eyes.png" id="6_oc1iy"]
+[ext_resource type="Texture2D" uid="uid://c3spa654o6346" path="res://Img/Main/Demon/eyes.png" id="7_6qtdx"]
+[ext_resource type="Texture2D" uid="uid://dpk1l3hh7yiqj" path="res://Img/Main/Demon/angel_healing2.png" id="10_4wim4"]
+[ext_resource type="Texture2D" uid="uid://c6xvtgx4byus5" path="res://Img/Main/Player/hvat_ver4.png" id="10_n2r1e"]
+[ext_resource type="Texture2D" uid="uid://dn2wcy6b7w71i" path="res://Img/Main/Player/shot_left_ver3.png" id="11_cfyf7"]
+[ext_resource type="Texture2D" uid="uid://vcw8m7onub1s" path="res://Img/Main/Items/gun_ver3.png" id="12_mmcll"]
+[ext_resource type="AudioStream" uid="uid://bkufnpn4w55hd" path="res://Audio/hvat.mp3" id="13_6buny"]
+[ext_resource type="AudioStream" uid="uid://cg75uh1l4uc1y" path="res://Audio/vzmah.mp3" id="14_ixani"]
+[ext_resource type="Texture2D" uid="uid://dwf31ftewimt1" path="res://Img/Main/Player/sprite_heal_ver3.png" id="14_s3l1t"]
+[ext_resource type="Texture2D" uid="uid://xo8svcug0bvp" path="res://Img/Main/Player/na_angela.png" id="16_ogaus"]
+[ext_resource type="AudioStream" uid="uid://unf0kim8xmg8" path="res://Audio/glassTresk.mp3" id="16_wnsxb"]
+[ext_resource type="AudioStream" uid="uid://5t0yo3xqudgr" path="res://Audio/glassBroken.mp3" id="17_p757c"]
+[ext_resource type="Shader" path="res://Main.gdshader" id="17_vxt5k"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_os7wu"]
+shader = ExtResource("17_vxt5k")
+shader_parameter/pixel_size = 2.1
+
+[sub_resource type="Animation" id="Animation_jah0q"]
+resource_name = "DemonHeal"
+length = 2.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Room23/Demon/AngelHealing2:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5, 1.9086),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Room23/Demon/AngelHealing2:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.6, 0.7, 1, 1.1, 1.2, 1.3, 1.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 0, 1, 2, 2, 3, 3, 4, 5, 6, 7]
+}
+
+[sub_resource type="Animation" id="Animation_kcikb"]
+resource_name = "GrabItem"
+length = 0.5515
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Player/HvatVer4:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.06, 0.48),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0, 1, 7]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Player/HvatVer4:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.06, 0.12, 0.18, 0.24, 0.3, 0.36, 0.42, 0.48, 0.5, 0.52, 0.54),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 700), Vector2(0, 0), Vector2(0, 0), Vector2(0, 0), Vector2(0, 0), Vector2(0, 0), Vector2(0, 0), Vector2(0, 0), Vector2(0, 0), Vector2(0, 233.333), Vector2(0, 466.667), Vector2(0, 700)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Player/HvatVer4/Vzmah:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Player/GunVer3/Hvat:playing")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.3),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_pt4cy"]
+resource_name = "Heal"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Player/SpriteHealVer3:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 1.7, 1.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 900), Vector2(0, 250), Vector2(0, 250), Vector2(0, 900)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Player/SpriteHealVer3:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.3, 0.4, 0.5, 0.6, 1.2, 1.3, 1.4, 1.5, 1.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 0, 1, 2, 3, 4, 4, 5, 6, 7, 7]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Player/SpriteHealVer3/Tresk:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Player/SpriteHealVer3/Broken:playing")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(1.2),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_h6jm1"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Room23/Demon/AngelHealing2:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Room23/Demon/AngelHealing2:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Player/SpriteHealVer3:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Player/SpriteHealVer3:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 900)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Player/HvatVer4:frame")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Player/HvatVer4:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 700)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Player/ShotLeftVer3:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 700)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Player/ShotLeftVer3:frame")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Player/NaAngela:position")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 700)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Player/NaAngela:frame")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_xq3hw"]
+resource_name = "ShotDemon"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Player/NaAngela:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.05103),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-100, 700), Vector2(-80, 250)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Player/NaAngela:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.05103, 0.10206, 0.15309, 0.20412, 0.25515, 0.30618, 0.35721, 0.40824),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 0, 1, 2, 3, 4, 5, 6, 7]
+}
+
+[sub_resource type="Animation" id="Animation_kh862"]
+resource_name = "ShotMe"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Player/ShotLeftVer3:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.06, 0.48),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 700), Vector2(0, 250), Vector2(0, 250)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Player/ShotLeftVer3:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.06, 0.12, 0.18, 0.24, 0.3, 0.36, 0.42),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7]
+}
+
+[sub_resource type="Animation" id="Animation_0i8wn"]
+resource_name = "FirstLights"
+length = 2.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Lights/Light3:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Lights/Light3:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8wqj6"]
+_data = {
+"DemonHeal": SubResource("Animation_jah0q"),
+"FirstLights": SubResource("Animation_0i8wn"),
+"GrabItem": SubResource("Animation_kcikb"),
+"Heal": SubResource("Animation_pt4cy"),
+"RESET": SubResource("Animation_h6jm1"),
+"ShotDemon": SubResource("Animation_xq3hw"),
+"ShotMe": SubResource("Animation_kh862")
+}
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_f8e17"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_aey6u")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+material = SubResource("ShaderMaterial_os7wu")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_lock_ = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_8wqj6")
+}
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Lights" type="Node2D" parent="."]
+
+[node name="Light" type="Sprite2D" parent="Lights"]
+position = Vector2(-462, -319)
+texture = ExtResource("2_dp0rl")
+
+[node name="Light2" type="Sprite2D" parent="Lights"]
+position = Vector2(445, -352)
+texture = ExtResource("2_dp0rl")
+
+[node name="Light3" type="Sprite2D" parent="Lights"]
+modulate = Color(1, 1, 1, 0)
+z_index = 1
+scale = Vector2(8.57651, 5.59881)
+texture = ExtResource("2_dp0rl")
+
+[node name="Room23" type="Sprite2D" parent="."]
+texture = ExtResource("1_7r57k")
+metadata/_edit_lock_ = true
+
+[node name="Demon" type="Node2D" parent="Room23"]
+script = ExtResource("5_g0oll")
+
+[node name="Belki2" type="Sprite2D" parent="Room23/Demon"]
+position = Vector2(1, 40)
+texture = ExtResource("5_b4qwd")
+
+[node name="CatEye" type="CanvasGroup" parent="Room23/Demon"]
+visible = false
+position = Vector2(1, 40)
+
+[node name="CatEyes" type="Sprite2D" parent="Room23/Demon/CatEye"]
+texture = ExtResource("6_oc1iy")
+hframes = 6
+frame = 4
+
+[node name="CatEyes3" type="Sprite2D" parent="Room23/Demon/CatEye"]
+texture = ExtResource("6_oc1iy")
+hframes = 6
+frame = 3
+
+[node name="CatEyes6" type="Sprite2D" parent="Room23/Demon/CatEye"]
+texture = ExtResource("6_oc1iy")
+hframes = 6
+frame = 2
+
+[node name="CatEyes5" type="Sprite2D" parent="Room23/Demon/CatEye"]
+texture = ExtResource("6_oc1iy")
+hframes = 6
+frame = 1
+
+[node name="CatEyes7" type="Sprite2D" parent="Room23/Demon/CatEye"]
+texture = ExtResource("6_oc1iy")
+hframes = 6
+frame = 5
+
+[node name="CatEyes4" type="Sprite2D" parent="Room23/Demon/CatEye"]
+texture = ExtResource("6_oc1iy")
+hframes = 6
+
+[node name="Eye" type="CanvasGroup" parent="Room23/Demon"]
+position = Vector2(1, 40)
+
+[node name="Eyes2" type="Sprite2D" parent="Room23/Demon/Eye"]
+texture = ExtResource("7_6qtdx")
+hframes = 6
+frame = 1
+
+[node name="Eyes6" type="Sprite2D" parent="Room23/Demon/Eye"]
+texture = ExtResource("7_6qtdx")
+hframes = 6
+frame = 5
+
+[node name="Eyes5" type="Sprite2D" parent="Room23/Demon/Eye"]
+texture = ExtResource("7_6qtdx")
+hframes = 6
+frame = 4
+
+[node name="Eyes4" type="Sprite2D" parent="Room23/Demon/Eye"]
+texture = ExtResource("7_6qtdx")
+hframes = 6
+frame = 3
+
+[node name="Eyes3" type="Sprite2D" parent="Room23/Demon/Eye"]
+texture = ExtResource("7_6qtdx")
+hframes = 6
+frame = 2
+
+[node name="Eyes" type="Sprite2D" parent="Room23/Demon/Eye"]
+texture = ExtResource("7_6qtdx")
+hframes = 6
+
+[node name="Ebaka10" type="Sprite2D" parent="Room23/Demon"]
+position = Vector2(1, 40)
+texture = ExtResource("4_yruaf")
+
+[node name="AngelHealing2" type="Sprite2D" parent="Room23/Demon"]
+modulate = Color(1, 1, 1, 0)
+texture = ExtResource("10_4wim4")
+hframes = 8
+
+[node name="TableVer2" type="Sprite2D" parent="Room23"]
+texture = ExtResource("2_ljay8")
+
+[node name="Player" type="Node" parent="."]
+
+[node name="GunVer3" type="Sprite2D" parent="Player"]
+position = Vector2(-20, 321)
+texture = ExtResource("12_mmcll")
+
+[node name="Hvat" type="AudioStreamPlayer" parent="Player/GunVer3"]
+stream = ExtResource("13_6buny")
+
+[node name="HvatVer4" type="Sprite2D" parent="Player"]
+position = Vector2(0, 700)
+texture = ExtResource("10_n2r1e")
+hframes = 8
+
+[node name="Vzmah" type="AudioStreamPlayer" parent="Player/HvatVer4"]
+stream = ExtResource("14_ixani")
+
+[node name="ShotLeftVer3" type="Sprite2D" parent="Player"]
+position = Vector2(0, 700)
+texture = ExtResource("11_cfyf7")
+hframes = 8
+
+[node name="SpriteHealVer3" type="Sprite2D" parent="Player"]
+position = Vector2(0, 900)
+texture = ExtResource("14_s3l1t")
+hframes = 8
+
+[node name="Tresk" type="AudioStreamPlayer" parent="Player/SpriteHealVer3"]
+stream = ExtResource("16_wnsxb")
+
+[node name="Broken" type="AudioStreamPlayer" parent="Player/SpriteHealVer3"]
+stream = ExtResource("17_p757c")
+
+[node name="NaAngela" type="Sprite2D" parent="Player"]
+position = Vector2(0, 700)
+texture = ExtResource("16_ogaus")
+hframes = 8
+
+[node name="Dialog Layer" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="Sprite2D" type="Sprite2D" parent="Dialog Layer"]
+modulate = Color(0, 0, 0, 0.737255)
+position = Vector2(960, 1080)
+scale = Vector2(1198.08, 469.143)
+texture = SubResource("CanvasTexture_f8e17")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Dialog Layer"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -539.5
+offset_top = -198.0
+offset_right = 539.5
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/normal_font_size = 46
+bbcode_enabled = true
+text = "Добро пожаловать, друг, я хочу поиграть с тобой в одну [color=ff0000]игру[/color]. Правила простые"
+scroll_active = false
+shortcut_keys_enabled = false
+deselect_on_focus_loss_enabled = false
+drag_and_drop_selection_enabled = false
+
+[node name="MarginContainer" type="MarginContainer" parent="Dialog Layer"]
+offset_right = 40.0
+offset_bottom = 40.0
